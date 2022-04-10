@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import venusImage from '../../Images/venus.jpg'
 import moonImage from '../../Images/moon.jpg'
 import spaceImage from '../../Images/space.jpg'
-import {Typography} from '@mui/material'
+import {Typography, Button} from '@mui/material'
 import TimeLine from "../TimeLine/TimeLine"
 import { Link } from 'react-router-dom';
 import {
@@ -139,12 +139,16 @@ const Home = ({ timelines, skills}) => {
         
 
       </div>
-      <Typography className='blink' style={{alignItems:"center"}} variant="subtitle1" color="textSecondary" gutterBottom><BsArrowDownShort style={{fontSize:"7rem", color:"#aeaeae", position:"absolute", top:"56%", bottom:"40%", left:"47%", right:"50%"}}/></Typography>
+      <Typography className='blink' style={{alignItems:"center"}} variant="subtitle1" color="textSecondary" gutterBottom><BsArrowDownShort style={{fontSize:"7rem", color:"#aeaeae", position:"absolute", top:"52%", bottom:"44%", left:"47%", right:"50%"}}/></Typography>
       
       
         <Typography variant="h3">TIMELINE</Typography>
         {timelines && (<TimeLine timelines={timelines}/>)}
         {!timelines && (<TimeLine timelines={[1,2,3]}/>)}
+        <a href='https://drive.google.com/file/d/12kQXcchjvXooI2U6pj1cwe8MRhuTKLi3/view?usp=sharing' 
+        rel="noreferrer" target="_blank" style={{textDecoration:"none"}}>
+        <Button  variant="contained" color="primary" className='btnRes' 
+        style={{display:"inline",justifyContent:"center",marginTop:"4rem",left:"43%", fontSize:"2.15rem"}} > My Resume </Button></a>
       </div>
       
       <div className="homeSkills">
@@ -202,6 +206,7 @@ const Home = ({ timelines, skills}) => {
           <SiThreedotjs />
         </div>
       </div>
+      
     </div>
 
   )

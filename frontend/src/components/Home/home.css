@@ -1,9 +1,11 @@
 .homeCanvas{
+ 
  width: 100vw;
  height: 100vh;
  max-width: 100%;
- filter: blur(5px);
+ filter: blur(4px);
  position: absolute;
+ transform: translate(0,-8%);
  
 }
 .homeCanvasBox {
@@ -11,7 +13,7 @@
   top: 50%;
   right: 0%;
   text-align: right;
-  transform: translate(0%, -50%);
+  transform: translate(0, -60%);
 }
 .homeCanvasContainer {
   background-color: rgba(0, 0, 0, 0.048);
@@ -89,12 +91,41 @@
     overflow-x: hidden;
   }
   
+  .btnRes{
+    position: relative;
+    bottom: 34%;
+    
+  }
+
+  .homeSkills1 {
+    transform: translateY(-200px);
+    background-color: hsl(219, 48%, 8%);
+    height: 1000px;
+    position: relative;
+    margin-bottom: -200px;
+    padding: 200px;
+    box-sizing: border-box;
+    perspective: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .homeSkills1 > h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: 4vmax;
+    font-size: 4vmax;
+  }
+
   .homeSkills > h3 {
     text-align: center;
     color: white;
     margin-bottom: 4vmax;
     font-size: 4vmax;
   }
+  
   .homeCubeSkills {
     width: 187px;
     height: 190px;
