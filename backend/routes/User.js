@@ -11,7 +11,7 @@ import {
   deleteProject,
   contact,
 } from "../controller/User.js";
-import { isAuthenticated } from "../middlewares/Auth.js";
+import { isAuthenticated } from "../middlewares/auth.js";
 
 export const userRouter = express.Router();
 
