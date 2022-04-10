@@ -1,0 +1,235 @@
+.homeCanvas{
+ width: 100vw;
+ height: 100vh;
+ max-width: 100%;
+ filter: blur(5px);
+ position: absolute;
+ 
+}
+.homeCanvasBox {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  text-align: right;
+  transform: translate(0%, -50%);
+}
+.homeCanvasContainer {
+  background-color: rgba(0, 0, 0, 0.048);
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  height: 100vh;
+  color: white;
+  display: flex;
+}
+.homeCanvasContainer > h1 > p {
+  transition: all 0.5s;
+  color: rgb(36, 36, 36);
+}
+.homeCanvasContainer > h1 > p:hover {
+  transform: translateY(-10px);
+}
+.homeCanvasBox > h2 {
+  font: 900 4rem "Ubuntu Mono", "Roboto";
+  letter-spacing: 22px;
+  line-height: 130px;
+  color: white;
+}
+
+.blink {
+  animation: blink-animation 4s steps(2, start) infinite;
+  -webkit-animation: blink-animation 3s steps(2, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.homeCanvasContainer {
+    background-color: rgba(0, 0, 0, 0.048);
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    height: 100vh;
+    color: white;
+    display: flex;
+  }
+  .homeContainer {
+    background-color: white;
+    padding-top: 4vmax;
+    border-radius: 0 0 200px 200px;
+    border-bottom: 200px solid white;
+    position: relative;
+    z-index: 1;
+  }
+  .homeContainer > h3 {
+    text-align: center;
+    color: rgba(22, 20, 20, 0.904);
+    padding: 4vmax;
+  }
+  .homeSkills {
+    transform: translateY(-200px);
+    background-color: hsl(219, 48%, 8%);
+    height: 1500px;
+    position: relative;
+    margin-bottom: -200px;
+    padding: 200px;
+    box-sizing: border-box;
+    perspective: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  
+  .homeSkills > h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: 4vmax;
+    font-size: 4vmax;
+  }
+  .homeCubeSkills {
+    width: 187px;
+    height: 190px;
+    animation: cubeRotation 15s linear infinite alternate;
+    transform-style: preserve-3d;
+  }
+
+  .homeCubeSkillsFaces {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    opacity: 0.7;
+  }
+  .homeCubeSkillsFaces > img {
+    width: inherit;
+    height: inherit;
+  }
+
+  
+.homeCubeSkillsFace1 {
+  transform: translate3d(0, 0, 119px);
+}
+.homeCubeSkillsFace2 {
+  transform: rotateY(180deg) translate3d(0, 0, 120px);
+}
+.homeCubeSkillsFace3 {
+  transform: rotateY(-90deg) translate3d(0, 0, 120px);
+}
+.homeCubeSkillsFace4 {
+  transform: rotateY(90deg) translate3d(0, 0, 120px);
+}
+.homeCubeSkillsFace5 {
+  transform: rotateX(90deg) translate3d(0, 0, 120px);
+}
+.homeCubeSkillsFace6 {
+  transform: rotateX(-90deg) translate3d(0, 0, 120px);
+}
+
+.cubeShadow {
+  width: 250px;
+  height: 30px;
+  background-color: rgba(250, 202, 187, 0.171);
+  border-radius: 60%;
+  animation: cubeShadow 2s ease-in-out infinite alternate;
+  filter: blur(4px);
+}
+
+
+.homeskillsBox {
+  background-color: gradient(to right, hsl(219, 48%, 8%), hsl(219, 48%, 8%));
+  padding: 0 2vmax;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: -16px;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.homeskillsBox > svg {
+  font-size: 3.5vmax;
+  color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  margin: 8px;
+  padding: 3px;
+}
+
+.homeskillsBox > :last-child {
+  padding-bottom: 8px;
+}
+.homeskillsBox > :first-child {
+  padding-top: 8px;
+}
+.homeskillsBox > :nth-child(odd) {
+  font-weight: 700;
+  color:  #D5D6D7;
+}
+.homeskillsBox > :nth-child(even) {
+  font-weight: 600;
+  color: #a28c8c;
+}
+#reacticon {
+  color: #30aef1 !important;
+}
+
+#mongoicon {
+  color: #44883e !important;
+}
+#nodeicon {
+  color: #37ee26 !important;
+}
+#expicon{
+  color: #f9c851 !important;
+}
+
+.homeskillsBox > svg:hover {
+  color: #FEDE00;
+  transform: scale(1.5);
+  transform:  rotate(720deg);
+}
+
+
+
+
+@keyframes cubeRotation {
+  to {
+    transform: rotateY(360deg) rotateX(480deg) rotateZ(720deg);
+  }
+}
+
+@keyframes cubeShadow {
+  to {
+    transform: scale(1.2) translateY(-12px) translateX(-12px);
+  }
+}
+
+@keyframes homeskillsBoxAnimationOn {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 40px;
+  }
+}
+
+@keyframes homeskillsBoxAnimationOff {
+  from {
+    right: 40px;
+  }
+  to {
+    right: -300px;
+  }
+}
