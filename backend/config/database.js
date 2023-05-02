@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export const connectDatabse = () => {
   mongoose
-    .connect(process.env.MONGO_URI, {
+    .connect('mongodb+srv://user-portfolio:rishabh123@cluster0.ffesr.mongodb.net/portfolio?retryWrites=tru', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
