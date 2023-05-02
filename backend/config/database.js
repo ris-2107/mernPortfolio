@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export const connectDatabse = () => {
   mongoose
-    .connect('mongodb://127.0.0.1:27017', {
+    .connect('mongodb://0.0.0.0:27017', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
