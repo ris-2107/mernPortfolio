@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export const connectDatabse = () => {
   mongoose
-    .connect('mongodb+srv://user-portfolio:rishabh123@cluster0.ffesr.mongodb.net/portfolio?retryWrites=true', {
+    .connect('mongodb://127.0.0.1:27017', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
